@@ -23,7 +23,7 @@ class Logger: UIViewController {
         let message = input.map { "\($0)" }.joined(separator: separator)
         let level = level(logLevel: logLevel)
         let date = date()
-        let context = Context(file: file, function: function, line: line, date: date, item: message, level: logLevel)
+        let context = Context(file: file, function: function, line: line, date: date, input: message, level: logLevel)
         logs?.append(context)
         print(level: level, context: context, separator: separator, terminator: terminator, function: function, file: file, line: line)
     }

@@ -12,7 +12,7 @@ enum LogLevel: Codable {
     case warning
     case error
     
-     var prefix: String {
+     var prefix: String? {
         switch self {
         case .info: return "INFO ℹ️"
         case .warning: return "WARNING ⚠️"

@@ -17,12 +17,12 @@ class logsTableViewCell: UITableViewCell {
     
     var log: Context? {
         didSet {
-            levelLabel.text = "\(log?.level.prefix ?? "")"
+            levelLabel.text = "\(log?.level?.prefix ?? "")"
             dateLabel.text = log?.date
             fileNameLabel.text = "\(((log?.file ?? "") as NSString).lastPathComponent)"
             lineNumberLabel.text = "\(log?.line ?? 0)"
             functionNameLabel.text = log?.function
-            messageLabel.text = log?.item
+            messageLabel.text = log?.input
         }
     }
 }
